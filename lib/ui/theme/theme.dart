@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-const _primaryColor = Color(0xFF105CDB);
-
+const _primaryColor = Color(0xFF006EE9);
+const textfieldDecoration = InputDecoration(
+  contentPadding: EdgeInsets.zero,
+  enabledBorder: UnderlineInputBorder(
+    borderSide: BorderSide(color: _primaryColor, width: 3),
+  ),
+  focusedBorder: UnderlineInputBorder(
+    borderSide: BorderSide(color: _primaryColor, width: 3),
+  ),
+);
 final lightTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
     seedColor: _primaryColor,

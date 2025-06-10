@@ -13,5 +13,18 @@
   "forgotPassword": "Forgot password?",
   "orLoginWith": "Or Login with",
   "dontHaveAnAccount": "Don’t have an account?",
-  "signUp": " Sign Up"
+  "signUp": " Sign Up",
+  "login": "Login",
+  "password": "Password",
+  "email": "Email",
+  "confirmPassword": "Confirm Password",
+  "createYourAccount": "Create your account",
+  "username": "Username",
+  "register": "Register",
+  "orRegisterWith": "Or Register with",
+  "verifyAccount": "Verify Account",
+  "pleaseEnterTheVerificationNumber": "Please enter the verification number\nwe send to your email",
+  "confirm": "Confirm",
+  "dontReceiveACode": "Don’t receive a code? ",
+  "resend": "Resend"
 }

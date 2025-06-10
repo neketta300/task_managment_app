@@ -65,8 +65,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/getStartedScreens/
-    - assets/loginTextfield/
-    - assets/signInW/
+    - assets/textfieldsIcons/
+    - assets/signInWithIcons/
+    - assets/backButtonIcon/
+    - assets/authFlow/
     - assets/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

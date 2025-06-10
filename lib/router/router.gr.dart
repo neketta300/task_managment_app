@@ -43,17 +43,17 @@ class CalendarRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [FirstStartScreen]
-class FirstStartRoute extends PageRouteInfo<void> {
-  const FirstStartRoute({List<PageRouteInfo>? children})
-    : super(FirstStartRoute.name, initialChildren: children);
+/// [FstOnboardingScreen]
+class FstOnboardingRoute extends PageRouteInfo<void> {
+  const FstOnboardingRoute({List<PageRouteInfo>? children})
+    : super(FstOnboardingRoute.name, initialChildren: children);
 
-  static const String name = 'FirstStartRoute';
+  static const String name = 'FstOnboardingRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const FirstStartScreen();
+      return const FstOnboardingScreen();
     },
   );
 }
@@ -107,49 +107,65 @@ class MainRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [SecondStartScreen]
-class SecondStartRoute extends PageRouteInfo<void> {
-  const SecondStartRoute({List<PageRouteInfo>? children})
-    : super(SecondStartRoute.name, initialChildren: children);
+/// [RegisterScreen]
+class RegisterRoute extends PageRouteInfo<void> {
+  const RegisterRoute({List<PageRouteInfo>? children})
+    : super(RegisterRoute.name, initialChildren: children);
 
-  static const String name = 'SecondStartRoute';
+  static const String name = 'RegisterRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const SecondStartScreen();
+      return const RegisterScreen();
     },
   );
 }
 
 /// generated route for
-/// [StartScreensTaber]
-class StartRoutesTaber extends PageRouteInfo<void> {
-  const StartRoutesTaber({List<PageRouteInfo>? children})
-    : super(StartRoutesTaber.name, initialChildren: children);
+/// [ScndOnboardingScreen]
+class ScndOnboardingRoute extends PageRouteInfo<void> {
+  const ScndOnboardingRoute({List<PageRouteInfo>? children})
+    : super(ScndOnboardingRoute.name, initialChildren: children);
 
-  static const String name = 'StartRoutesTaber';
+  static const String name = 'ScndOnboardingRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const StartScreensTaber();
+      return const ScndOnboardingScreen();
     },
   );
 }
 
 /// generated route for
-/// [ThirdStartScreen]
-class ThirdStartRoute extends PageRouteInfo<void> {
-  const ThirdStartRoute({List<PageRouteInfo>? children})
-    : super(ThirdStartRoute.name, initialChildren: children);
+/// [ThdOnboardingScreen]
+class ThdOnboardingRoute extends PageRouteInfo<void> {
+  const ThdOnboardingRoute({List<PageRouteInfo>? children})
+    : super(ThdOnboardingRoute.name, initialChildren: children);
 
-  static const String name = 'ThirdStartRoute';
+  static const String name = 'ThdOnboardingRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const ThirdStartScreen();
+      return const ThdOnboardingScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [VerificationCodeScreen]
+class VerificationCodeRoute extends PageRouteInfo<void> {
+  const VerificationCodeRoute({List<PageRouteInfo>? children})
+    : super(VerificationCodeRoute.name, initialChildren: children);
+
+  static const String name = 'VerificationCodeRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const VerificationCodeScreen();
     },
   );
 }

@@ -183,6 +183,101 @@ class S {
   String get signUp {
     return Intl.message(' Sign Up', name: 'signUp', desc: '', args: []);
   }
+
+  /// `Login`
+  String get login {
+    return Intl.message('Login', name: 'login', desc: '', args: []);
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message('Email', name: 'email', desc: '', args: []);
+  }
+
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create your account`
+  String get createYourAccount {
+    return Intl.message(
+      'Create your account',
+      name: 'createYourAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Username`
+  String get username {
+    return Intl.message('Username', name: 'username', desc: '', args: []);
+  }
+
+  /// `Register`
+  String get register {
+    return Intl.message('Register', name: 'register', desc: '', args: []);
+  }
+
+  /// `Or Register with`
+  String get orRegisterWith {
+    return Intl.message(
+      'Or Register with',
+      name: 'orRegisterWith',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify Account`
+  String get verifyAccount {
+    return Intl.message(
+      'Verify Account',
+      name: 'verifyAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter the verification number\nwe send to your email`
+  String get pleaseEnterTheVerificationNumber {
+    return Intl.message(
+      'Please enter the verification number\nwe send to your email',
+      name: 'pleaseEnterTheVerificationNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm`
+  String get confirm {
+    return Intl.message('Confirm', name: 'confirm', desc: '', args: []);
+  }
+
+  /// `Don’t receive a code? `
+  String get dontReceiveACode {
+    return Intl.message(
+      'Don’t receive a code? ',
+      name: 'dontReceiveACode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend`
+  String get resend {
+    return Intl.message('Resend', name: 'resend', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

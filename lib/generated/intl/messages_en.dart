@@ -22,26 +22,43 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+    "confirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
+    "createYourAccount": MessageLookupByLibrary.simpleMessage(
+      "Create your account",
+    ),
     "dontHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Don’t have an account?",
+    ),
+    "dontReceiveACode": MessageLookupByLibrary.simpleMessage(
+      "Don’t receive a code? ",
     ),
     "easyTimeManagement": MessageLookupByLibrary.simpleMessage(
       "Easy Time Management",
     ),
+    "email": MessageLookupByLibrary.simpleMessage("Email"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot password?"),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "increaseWorkEffectiveness": MessageLookupByLibrary.simpleMessage(
       "Increase Work Effectiveness",
     ),
+    "login": MessageLookupByLibrary.simpleMessage("Login"),
     "loginToYourAccount": MessageLookupByLibrary.simpleMessage(
       "Login to your account",
     ),
     "managementApp": MessageLookupByLibrary.simpleMessage("Management  App"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "orLoginWith": MessageLookupByLibrary.simpleMessage("Or Login with"),
+    "orRegisterWith": MessageLookupByLibrary.simpleMessage("Or Register with"),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "pleaseEnterTheVerificationNumber": MessageLookupByLibrary.simpleMessage(
+      "Please enter the verification number\nwe send to your email",
+    ),
+    "register": MessageLookupByLibrary.simpleMessage("Register"),
     "reminderNotification": MessageLookupByLibrary.simpleMessage(
       "Reminder Notification",
     ),
+    "resend": MessageLookupByLibrary.simpleMessage("Resend"),
     "signUp": MessageLookupByLibrary.simpleMessage(" Sign Up"),
     "skip": MessageLookupByLibrary.simpleMessage("skip"),
     "theAdvantageOfThisApplicationIs": MessageLookupByLibrary.simpleMessage(
@@ -50,6 +67,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "timeManagement": MessageLookupByLibrary.simpleMessage(
       "Time management and the determination\nof more important tasks will give your job\nstatistics better and always improve",
     ),
+    "username": MessageLookupByLibrary.simpleMessage("Username"),
+    "verifyAccount": MessageLookupByLibrary.simpleMessage("Verify Account"),
     "withManagementBasedOnPriority": MessageLookupByLibrary.simpleMessage(
       "With management based on priority and\ndaily tasks, it will give you convenience in\nmanaging and determining the tasks that\nmust be done first",
     ),

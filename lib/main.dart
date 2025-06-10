@@ -21,10 +21,10 @@ class TaskManagment extends StatelessWidget {
   TaskManagment({super.key});
   final _router = AppRouter();
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
