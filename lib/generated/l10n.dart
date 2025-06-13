@@ -279,6 +279,26 @@ class S {
   String get resend {
     return Intl.message('Resend', name: 'resend', desc: '', args: []);
   }
+
+  /// `Your Account has been\nVerified Successfully!`
+  String get yourAccountHasBeennverifiedSuccessfully {
+    return Intl.message(
+      'Your Account has been\nVerified Successfully!',
+      name: 'yourAccountHasBeennverifiedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go to Dashboard`
+  String get goToDashboard {
+    return Intl.message(
+      'Go to Dashboard',
+      name: 'goToDashboard',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -47,7 +47,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         CirclesRow(currentIndex: index),
                         const Spacer(),
                         GestureDetector(
-                          onTap: () {},
+                          onTap:
+                              () => AutoRouter.of(
+                                context,
+                              ).replace(const LoginRoute()),
                           child: Text(
                             S.of(context).skip,
                             style: theme.textTheme.labelSmall?.copyWith(
@@ -86,22 +89,27 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 currentPage == onboardingContentList.length - 1
                     ? BaseButton(
                       text: S.of(context).getStarted,
-                      onTap:
-                          () => AutoRouter.of(context).push(const LoginRoute()),
+                      onTap: () => _onGetStartedTap(context),
                     )
                     : BaseButton(
                       text: S.of(context).next,
-                      onTap: () {
-                        _pageController.nextPage(
-                          duration: const Duration(milliseconds: 200),
-                          curve: Curves.easeInOut,
-                        );
-                      },
+                      onTap: () => _onNextTap(),
                     ),
                 SizedBox(height: SizeConfig.getVerticalPadding(25)),
               ],
             ),
       ),
     );
+  }
+
+  void _onNextTap() {
+    _pageController.nextPage(
+      duration: const Duration(milliseconds: 200),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  void _onGetStartedTap(BuildContext context) {
+    AutoRouter.of(context).replace(const LoginRoute());
   }
 }

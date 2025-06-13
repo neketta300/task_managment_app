@@ -42,7 +42,10 @@ class LoginScreen extends StatelessWidget {
                 ),
                 ForgotPassword(),
                 SizedBox(height: SizeConfig.getVerticalPadding(42)),
-                BaseButton(text: S.of(context).login, onTap: () {}),
+                BaseButton(
+                  text: S.of(context).login,
+                  onTap: () => _onLoginTap(context),
+                ),
                 SizedBox(height: SizeConfig.getVerticalPadding(35)),
                 BaseLoginLabel(text: S.of(context).orLoginWith),
                 SizedBox(height: SizeConfig.getVerticalPadding(21)),
@@ -74,9 +77,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {
-                        AutoRouter.of(context).push(const RegisterRoute());
-                      },
+                      onTap: () => _onSignUpTap(context),
                       child: Text(
                         S.of(context).signUp,
                         style: GoogleFonts.poppins(
@@ -94,32 +95,12 @@ class LoginScreen extends StatelessWidget {
       ),
     );
   }
-}
 
-class BaseTitleNSubtitle extends StatelessWidget {
-  const BaseTitleNSubtitle({super.key});
+  void _onLoginTap(BuildContext context) {
+    AutoRouter.of(context).replace(const MainRoute());
+  }
 
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return Column(
-      children: [
-        Text(
-          "TASK-WAN",
-          style: GoogleFonts.righteous(
-            fontSize: 30,
-          ).copyWith(color: theme.primaryColor),
-        ),
-        SizedBox(height: SizeConfig.getVerticalPadding(7)),
-        Text(
-          S.of(context).managementApp,
-          style: GoogleFonts.poppins(
-            color: Color(0xFF9A9A9A),
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ],
-    );
+  void _onSignUpTap(BuildContext context) {
+    AutoRouter.of(context).push(const RegisterRoute());
   }
 }

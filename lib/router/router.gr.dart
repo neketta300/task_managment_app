@@ -123,6 +123,22 @@ class RegisterRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [SuccessVerificationScreen]
+class SuccessVerificationRoute extends PageRouteInfo<void> {
+  const SuccessVerificationRoute({List<PageRouteInfo>? children})
+    : super(SuccessVerificationRoute.name, initialChildren: children);
+
+  static const String name = 'SuccessVerificationRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const SuccessVerificationScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [VerificationCodeScreen]
 class VerificationCodeRoute extends PageRouteInfo<void> {
   const VerificationCodeRoute({List<PageRouteInfo>? children})

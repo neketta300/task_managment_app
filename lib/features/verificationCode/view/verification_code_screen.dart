@@ -1,4 +1,4 @@
-import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:task_managment/generated/l10n.dart';
 
 import '../../../core/core.dart';
+import '../../../router/router.dart';
 import '../../../ui/ui.dart';
 
 @RoutePage()
@@ -46,21 +47,7 @@ class VerificationCodeScreen extends StatelessWidget {
                 Column(
                   children: [
                     SizedBox(height: SizeConfig.getVerticalPadding(114)),
-                    Text(
-                      "TASK-WAN",
-                      style: GoogleFonts.righteous(
-                        fontSize: 30,
-                      ).copyWith(color: theme.primaryColor),
-                    ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(7)),
-                    Text(
-                      S.of(context).managementApp,
-                      style: GoogleFonts.poppins(
-                        color: Color(0xFF9A9A9A),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
+                    BaseTitleNSubtitle(),
                     SizedBox(height: SizeConfig.getVerticalPadding(45)),
                     Text(
                       S.of(context).verifyAccount,
@@ -114,7 +101,10 @@ class VerificationCodeScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: SizeConfig.getVerticalPadding(61)),
-                    BaseButton(text: S.of(context).confirm, onTap: () {}),
+                    BaseButton(
+                      text: S.of(context).confirm,
+                      onTap: () => _onConfirmTap(context),
+                    ),
                   ],
                 ),
               ],
@@ -123,6 +113,10 @@ class VerificationCodeScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _onConfirmTap(BuildContext context) {
+    AutoRouter.of(context).push(const SuccessVerificationRoute());
   }
 
   void _onBackButtonPressed(BuildContext context) {
