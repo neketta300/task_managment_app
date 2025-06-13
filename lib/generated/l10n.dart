@@ -28,9 +28,10 @@ class S {
   static const AppLocalizationDelegate delegate = AppLocalizationDelegate();
 
   static Future<S> load(Locale locale) {
-    final name = (locale.countryCode?.isEmpty ?? false)
-        ? locale.languageCode
-        : locale.toString();
+    final name =
+        (locale.countryCode?.isEmpty ?? false)
+            ? locale.languageCode
+            : locale.toString();
     final localeName = Intl.canonicalizedLocale(name);
     return initializeMessages(localeName).then((_) {
       Intl.defaultLocale = localeName;
@@ -107,7 +108,7 @@ class S {
   /// `The advantage of this application is that\nit also provides reminders for you\nso you don't forget to keep doing your\nassignments well and according to the\ntime you have set`
   String get theAdvantageOfThisApplicationIs {
     return Intl.message(
-      'The advantage of this application is that\\nit also provides reminders for you\nso you don\'t forget to keep doing your\nassignments well and according to the\ntime you have set',
+      'The advantage of this application is that\nit also provides reminders for you\nso you don\'t forget to keep doing your\nassignments well and according to the\ntime you have set',
       name: 'theAdvantageOfThisApplicationIs',
       desc: '',
       args: [],

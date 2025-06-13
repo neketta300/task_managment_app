@@ -15,13 +15,7 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     // Onboarding flow
-    AutoRoute(
-      path: '/onboarding/first',
-      page: FstOnboardingRoute.page,
-      initial: true,
-    ),
-    AutoRoute(path: '/onboarding/second', page: ScndOnboardingRoute.page),
-    AutoRoute(path: '/onboarding/third', page: ThdOnboardingRoute.page),
+    AutoRoute(path: '/onboarding', page: OnboardingRoute.page, initial: true),
 
     // Auth flow
     AutoRoute(page: LoginRoute.page, path: '/login'),

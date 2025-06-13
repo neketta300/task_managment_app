@@ -43,22 +43,6 @@ class CalendarRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [FstOnboardingScreen]
-class FstOnboardingRoute extends PageRouteInfo<void> {
-  const FstOnboardingRoute({List<PageRouteInfo>? children})
-    : super(FstOnboardingRoute.name, initialChildren: children);
-
-  static const String name = 'FstOnboardingRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const FstOnboardingScreen();
-    },
-  );
-}
-
-/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})
@@ -107,6 +91,22 @@ class MainRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [OnboardingScreen]
+class OnboardingRoute extends PageRouteInfo<void> {
+  const OnboardingRoute({List<PageRouteInfo>? children})
+    : super(OnboardingRoute.name, initialChildren: children);
+
+  static const String name = 'OnboardingRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const OnboardingScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [RegisterScreen]
 class RegisterRoute extends PageRouteInfo<void> {
   const RegisterRoute({List<PageRouteInfo>? children})
@@ -118,38 +118,6 @@ class RegisterRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const RegisterScreen();
-    },
-  );
-}
-
-/// generated route for
-/// [ScndOnboardingScreen]
-class ScndOnboardingRoute extends PageRouteInfo<void> {
-  const ScndOnboardingRoute({List<PageRouteInfo>? children})
-    : super(ScndOnboardingRoute.name, initialChildren: children);
-
-  static const String name = 'ScndOnboardingRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const ScndOnboardingScreen();
-    },
-  );
-}
-
-/// generated route for
-/// [ThdOnboardingScreen]
-class ThdOnboardingRoute extends PageRouteInfo<void> {
-  const ThdOnboardingRoute({List<PageRouteInfo>? children})
-    : super(ThdOnboardingRoute.name, initialChildren: children);
-
-  static const String name = 'ThdOnboardingRoute';
-
-  static PageInfo page = PageInfo(
-    name,
-    builder: (data) {
-      return const ThdOnboardingScreen();
     },
   );
 }

@@ -5,6 +5,7 @@ import 'package:task_managment/router/router.dart';
 
 import 'package:task_managment/ui/ui.dart';
 
+import 'core/core.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -23,6 +24,8 @@ class TaskManagment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig.init(context);
+
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       localizationsDelegates: [

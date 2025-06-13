@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:task_managment/generated/l10n.dart';
 import 'package:task_managment/router/router.dart';
 
+import '../../../core/core.dart';
 import '../../../ui/ui.dart';
 
 @RoutePage()
@@ -21,8 +22,8 @@ class RegisterScreen extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  left: 20,
-                  top: 76,
+                  left: SizeConfig.getVerticalPadding(20),
+                  top: SizeConfig.getHorizontalPadding(76),
                   child: IconButton(
                     style: ButtonStyle(
                       shape: WidgetStateProperty.all(
@@ -42,79 +43,76 @@ class RegisterScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(height: 18),
-                      Text(
-                        "TASK-WAN",
-                        style: GoogleFonts.righteous(
-                          fontSize: 30,
-                        ).copyWith(color: theme.primaryColor),
+                Column(
+                  children: [
+                    SizedBox(height: SizeConfig.getVerticalPadding(114)),
+                    Text(
+                      "TASK-WAN",
+                      style: GoogleFonts.righteous(
+                        fontSize: 30,
+                      ).copyWith(color: theme.primaryColor),
+                    ),
+                    SizedBox(height: SizeConfig.getVerticalPadding(7)),
+                    Text(
+                      S.of(context).managementApp,
+                      style: GoogleFonts.poppins(
+                        color: Color(0xFF9A9A9A),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
                       ),
-                      SizedBox(height: 7),
-                      Text(
-                        S.of(context).managementApp,
-                        style: GoogleFonts.poppins(
-                          color: Color(0xFF9A9A9A),
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
+                    ),
+                    SizedBox(height: SizeConfig.getVerticalPadding(55)),
+                    Text(
+                      S.of(context).createYourAccount,
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    SizedBox(height: SizeConfig.getVerticalPadding(35)),
+                    BaseTextfieldWIcon(
+                      pathToImage: 'assets/textfieldsIcons/person.svg',
+                      hintText: S.of(context).username,
+                    ),
+                    SizedBox(height: SizeConfig.getVerticalPadding(20)),
+                    BaseTextfieldWIcon(
+                      pathToImage: 'assets/textfieldsIcons/message.svg',
+                      hintText: S.of(context).email,
+                    ),
+                    SizedBox(height: SizeConfig.getVerticalPadding(20)),
+                    BaseTextfieldWIcon(
+                      pathToImage: 'assets/textfieldsIcons/lock.svg',
+                      hintText: S.of(context).password,
+                    ),
+                    SizedBox(height: SizeConfig.getVerticalPadding(20)),
+                    BaseTextfieldWIcon(
+                      pathToImage: 'assets/textfieldsIcons/lock.svg',
+                      hintText: S.of(context).confirmPassword,
+                    ),
+                    SizedBox(height: SizeConfig.getVerticalPadding(42)),
+                    BaseButton(
+                      text: S.of(context).register,
+                      onTap: () => _onRegisterTap(context),
+                    ),
+                    SizedBox(height: SizeConfig.getVerticalPadding(35)),
+                    BaseLoginLabel(text: S.of(context).orRegisterWith),
+                    SizedBox(height: SizeConfig.getVerticalPadding(21)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        BaseLoginWithButton(
+                          pathToImage: 'assets/signInWithIcons/google.svg',
                         ),
-                      ),
-                      SizedBox(height: 75),
-                      Text(
-                        S.of(context).createYourAccount,
-                        style: theme.textTheme.bodyMedium?.copyWith(
-                          fontWeight: FontWeight.w600,
+                        SizedBox(width: SizeConfig.getHorizontalPadding(40)),
+                        BaseLoginWithButton(
+                          pathToImage: 'assets/signInWithIcons/facebook.svg',
                         ),
-                      ),
-                      SizedBox(height: 35),
-                      BaseTextfieldWIcon(
-                        pathToImage: 'assets/textfieldsIcons/person.svg',
-                        hintText: S.of(context).username,
-                      ),
-                      SizedBox(height: 20),
-                      BaseTextfieldWIcon(
-                        pathToImage: 'assets/textfieldsIcons/message.svg',
-                        hintText: S.of(context).email,
-                      ),
-                      SizedBox(height: 20),
-                      BaseTextfieldWIcon(
-                        pathToImage: 'assets/textfieldsIcons/lock.svg',
-                        hintText: S.of(context).password,
-                      ),
-                      SizedBox(height: 20),
-                      BaseTextfieldWIcon(
-                        pathToImage: 'assets/textfieldsIcons/lock.svg',
-                        hintText: S.of(context).confirmPassword,
-                      ),
-                      SizedBox(height: 42),
-                      BaseButton(
-                        text: S.of(context).register,
-                        onTap: () => _onRegisterTap(context),
-                      ),
-                      SizedBox(height: 35),
-                      BaseLoginLabel(text: S.of(context).orRegisterWith),
-                      SizedBox(height: 21),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          BaseLoginWithButton(
-                            pathToImage: 'assets/signInWithIcons/google.svg',
-                          ),
-                          SizedBox(width: 40),
-                          BaseLoginWithButton(
-                            pathToImage: 'assets/signInWithIcons/facebook.svg',
-                          ),
-                          SizedBox(width: 40),
-                          BaseLoginWithButton(
-                            pathToImage: 'assets/signInWithIcons/twitter.svg',
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        SizedBox(width: SizeConfig.getHorizontalPadding(40)),
+                        BaseLoginWithButton(
+                          pathToImage: 'assets/signInWithIcons/twitter.svg',
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),
