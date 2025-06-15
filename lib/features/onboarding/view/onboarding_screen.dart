@@ -47,15 +47,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         CirclesRow(currentIndex: index),
                         const Spacer(),
                         GestureDetector(
-                          onTap:
-                              () => AutoRouter.of(
-                                context,
-                              ).replace(const LoginRoute()),
+                          onTap: () => AutoRouter.of(context).replace(const LoginRoute()),
                           child: Text(
                             S.of(context).skip,
-                            style: theme.textTheme.labelSmall?.copyWith(
-                              color: theme.primaryColor,
-                            ),
+                            style: theme.textTheme.labelSmall?.copyWith(color: theme.primaryColor),
                           ),
                         ),
                       ],
@@ -68,15 +63,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        SvgPicture.asset(
-                          onboardingContentList[index].pathToSvg,
-                        ),
-                        SizedBox(height: SizeConfig.getVerticalPadding(24)),
-                        Text(
-                          onboardingContentList[index].title,
-                          style: theme.textTheme.titleMedium,
-                        ),
-                        SizedBox(height: SizeConfig.getVerticalPadding(24)),
+                        SvgPicture.asset(onboardingContentList[index].pathToSvg),
+                        SizedBox(height: SizeConfig.getVerticalSize(24)),
+                        Text(onboardingContentList[index].title, style: theme.textTheme.titleMedium),
+                        SizedBox(height: SizeConfig.getVerticalSize(24)),
                         Text(
                           textAlign: TextAlign.center,
                           onboardingContentList[index].subtitle,
@@ -87,15 +77,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ),
                 currentPage == onboardingContentList.length - 1
-                    ? BaseButton(
-                      text: S.of(context).getStarted,
-                      onTap: () => _onGetStartedTap(context),
-                    )
-                    : BaseButton(
-                      text: S.of(context).next,
-                      onTap: () => _onNextTap(),
-                    ),
-                SizedBox(height: SizeConfig.getVerticalPadding(25)),
+                    ? BaseButton(text: S.of(context).getStarted, onTap: () => _onGetStartedTap(context))
+                    : BaseButton(text: S.of(context).next, onTap: () => _onNextTap()),
+                SizedBox(height: SizeConfig.getVerticalSize(25)),
               ],
             ),
       ),
@@ -103,10 +87,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   void _onNextTap() {
-    _pageController.nextPage(
-      duration: const Duration(milliseconds: 200),
-      curve: Curves.easeInOut,
-    );
+    _pageController.nextPage(duration: const Duration(milliseconds: 200), curve: Curves.easeInOut);
   }
 
   void _onGetStartedTap(BuildContext context) {

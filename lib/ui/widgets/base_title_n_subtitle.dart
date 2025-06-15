@@ -14,15 +14,13 @@ class BaseTitleNSubtitle extends StatelessWidget {
       children: [
         Text(
           "TASK-WAN",
-          style: GoogleFonts.righteous(
-            fontSize: 30,
-          ).copyWith(color: theme.primaryColor),
+          style: GoogleFonts.righteous(fontSize: 30).copyWith(color: theme.primaryColor),
         ),
-        SizedBox(height: SizeConfig.getVerticalPadding(7)),
+        SizedBox(height: SizeConfig.getVerticalSize(7)),
         Text(
           S.of(context).managementApp,
           style: GoogleFonts.poppins(
-            color: Color(0xFF9A9A9A),
+            color: const Color(0xFF9A9A9A),
             fontSize: 16,
             fontWeight: FontWeight.w500,
           ),

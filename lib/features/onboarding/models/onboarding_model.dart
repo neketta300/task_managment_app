@@ -6,11 +6,7 @@ class OnboardingModel {
   final String title;
   final String subtitle;
 
-  OnboardingModel({
-    required this.subtitle,
-    required this.pathToSvg,
-    required this.title,
-  });
+  OnboardingModel({required this.subtitle, required this.pathToSvg, required this.title});
 }
 
 List<OnboardingModel> getOnboardingContent(BuildContext context) {

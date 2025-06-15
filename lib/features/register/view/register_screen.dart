@@ -21,78 +21,65 @@ class RegisterScreen extends StatelessWidget {
             Stack(
               children: [
                 Positioned(
-                  left: SizeConfig.getVerticalPadding(20),
-                  top: SizeConfig.getHorizontalPadding(76),
+                  left: SizeConfig.getVerticalSize(20),
+                  top: SizeConfig.getHorizontalSize(76),
                   child: IconButton(
                     style: ButtonStyle(
                       shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
+                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       ),
-                      backgroundColor: WidgetStateProperty.all(
-                        theme.primaryColor,
-                      ),
+                      backgroundColor: WidgetStateProperty.all(theme.primaryColor),
                     ),
                     onPressed: () {
                       _onBackButtonPressed(context);
                     },
-                    icon: SvgPicture.asset(
-                      'assets/backButtonIcon/back_arrow.svg',
-                    ),
+                    icon: SvgPicture.asset('assets/backButtonIcon/back_arrow.svg'),
                   ),
                 ),
                 Column(
                   children: [
-                    SizedBox(height: SizeConfig.getVerticalPadding(114)),
-                    BaseTitleNSubtitle(),
-                    SizedBox(height: SizeConfig.getVerticalPadding(55)),
+                    SizedBox(height: SizeConfig.getVerticalSize(114)),
+                    const BaseTitleNSubtitle(),
+                    SizedBox(height: SizeConfig.getVerticalSize(55)),
                     Text(
                       S.of(context).createYourAccount,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(35)),
+                    SizedBox(height: SizeConfig.getVerticalSize(35)),
                     BaseTextfieldWIcon(
                       pathToImage: 'assets/textfieldsIcons/person.svg',
                       hintText: S.of(context).username,
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(20)),
+                    SizedBox(height: SizeConfig.getVerticalSize(20)),
                     BaseTextfieldWIcon(
                       pathToImage: 'assets/textfieldsIcons/message.svg',
                       hintText: S.of(context).email,
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(20)),
+                    SizedBox(height: SizeConfig.getVerticalSize(20)),
                     BaseTextfieldWIcon(
                       pathToImage: 'assets/textfieldsIcons/lock.svg',
                       hintText: S.of(context).password,
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(20)),
+                    SizedBox(height: SizeConfig.getVerticalSize(20)),
                     BaseTextfieldWIcon(
                       pathToImage: 'assets/textfieldsIcons/lock.svg',
                       hintText: S.of(context).confirmPassword,
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(42)),
-                    BaseButton(
-                      text: S.of(context).register,
-                      onTap: () => _onRegisterTap(context),
-                    ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(35)),
+                    SizedBox(height: SizeConfig.getVerticalSize(42)),
+                    BaseButton(text: S.of(context).register, onTap: () => _onRegisterTap(context)),
+                    SizedBox(height: SizeConfig.getVerticalSize(35)),
                     BaseLoginLabel(text: S.of(context).orRegisterWith),
-                    SizedBox(height: SizeConfig.getVerticalPadding(21)),
+                    SizedBox(height: SizeConfig.getVerticalSize(21)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        BaseLoginWithButton(
-                          pathToImage: 'assets/signInWithIcons/google.svg',
-                        ),
-                        SizedBox(width: SizeConfig.getHorizontalPadding(40)),
-                        BaseLoginWithButton(
+                        const BaseLoginWithButton(pathToImage: 'assets/signInWithIcons/google.svg'),
+                        SizedBox(width: SizeConfig.getHorizontalSize(40)),
+                        const BaseLoginWithButton(
                           pathToImage: 'assets/signInWithIcons/facebook.svg',
                         ),
-                        SizedBox(width: SizeConfig.getHorizontalPadding(40)),
-                        BaseLoginWithButton(
+                        SizedBox(width: SizeConfig.getHorizontalSize(40)),
+                        const BaseLoginWithButton(
                           pathToImage: 'assets/signInWithIcons/twitter.svg',
                         ),
                       ],

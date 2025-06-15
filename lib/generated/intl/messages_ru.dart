@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "createYourAccount": MessageLookupByLibrary.simpleMessage(
       "Create your account",
     ),
+    "dailyTask": MessageLookupByLibrary.simpleMessage("Daily Task"),
     "dontHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Don’t have an account?",
     ),
@@ -40,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot password?"),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "goToDashboard": MessageLookupByLibrary.simpleMessage("Go to Dashboard"),
+    "haveANiceDay": MessageLookupByLibrary.simpleMessage("Have a nice day!"),
     "increaseWorkEffectiveness": MessageLookupByLibrary.simpleMessage(
       "Increase Work Effectiveness",
     ),
@@ -48,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Login to your account",
     ),
     "managementApp": MessageLookupByLibrary.simpleMessage("Management  App"),
+    "myPriorityTask": MessageLookupByLibrary.simpleMessage("My Priority Task"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "orLoginWith": MessageLookupByLibrary.simpleMessage("Or Login with"),
     "orRegisterWith": MessageLookupByLibrary.simpleMessage("Or Register with"),
@@ -55,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pleaseEnterTheVerificationNumber": MessageLookupByLibrary.simpleMessage(
       "Please enter the verification number\nwe send to your email",
     ),
+    "progress": MessageLookupByLibrary.simpleMessage("Progress"),
     "register": MessageLookupByLibrary.simpleMessage("Register"),
     "reminderNotification": MessageLookupByLibrary.simpleMessage(
       "Reminder Notification",

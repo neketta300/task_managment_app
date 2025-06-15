@@ -19,10 +19,7 @@ class TextfieldCell extends StatelessWidget {
           }
         },
         decoration: textfieldDecoration,
-        inputFormatters: [
-          LengthLimitingTextInputFormatter(1),
-          FilteringTextInputFormatter.digitsOnly,
-        ],
+        inputFormatters: [LengthLimitingTextInputFormatter(1), FilteringTextInputFormatter.digitsOnly],
         textAlign: TextAlign.center,
         keyboardType: TextInputType.number,
       ),

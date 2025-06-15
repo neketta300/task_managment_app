@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:task_managment/router/router.dart';
-
 import 'package:task_managment/ui/ui.dart';
 
 import 'core/core.dart';
 import 'generated/l10n.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor: Colors.white, // Черный фон статус-бара
+    ),
+  );
   WidgetsFlutterBinding.ensureInitialized();
   debugDisableShadows = true;
   // Удаление splash screen после загрузки приложения
@@ -35,7 +40,7 @@ class TaskManagment extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      title: 'Flutter Demo',
+      title: 'Managment App',
       theme: lightTheme,
       routerConfig: _router.config(),
     );

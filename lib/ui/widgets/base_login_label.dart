@@ -13,12 +13,9 @@ class BaseLoginLabel extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(height: 1, width: 10, color: theme.primaryColor),
-        SizedBox(width: 6),
-        Text(
-          text,
-          style: GoogleFonts.poppins(fontSize: 14, color: Color(0xFF474747)),
-        ),
-        SizedBox(width: 6),
+        const SizedBox(width: 6),
+        Text(text, style: GoogleFonts.poppins(fontSize: 14, color: const Color(0xFF474747))),
+        const SizedBox(width: 6),
         Container(height: 1, width: 10, color: theme.primaryColor),
       ],
     );

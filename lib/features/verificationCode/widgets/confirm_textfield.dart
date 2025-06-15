@@ -7,16 +7,11 @@ class ConfirmTextfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 74),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 74),
       child: Row(
         spacing: 9,
-        children: [
-          TextfieldCell(),
-          TextfieldCell(),
-          TextfieldCell(),
-          TextfieldCell(),
-        ],
+        children: [TextfieldCell(), TextfieldCell(), TextfieldCell(), TextfieldCell()],
       ),
     );
   }

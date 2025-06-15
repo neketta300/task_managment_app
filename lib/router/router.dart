@@ -5,7 +5,7 @@ import 'package:task_managment/features/login/view/login_screen.dart';
 import 'package:task_managment/features/register/view/register_screen.dart';
 import 'package:task_managment/features/verificationCode/view/verification_code_screen.dart';
 import '../features/home/home.dart';
-import '../features/main/view/home_screen.dart';
+import '../features/main/view/main_screen.dart';
 import '../features/onboarding/start.dart';
 import '../features/successVerification/success_verification.dart';
 
@@ -21,14 +21,8 @@ class AppRouter extends RootStackRouter {
     // Auth flow
     AutoRoute(page: LoginRoute.page, path: '/login'),
     AutoRoute(page: RegisterRoute.page, path: '/register'),
-    AutoRoute(
-      page: VerificationCodeRoute.page,
-      path: '/register/code-verification',
-    ),
-    AutoRoute(
-      page: SuccessVerificationRoute.page,
-      path: '/register/code-verification/success-confirmation',
-    ),
+    AutoRoute(page: VerificationCodeRoute.page, path: '/register/code-verification'),
+    AutoRoute(page: SuccessVerificationRoute.page, path: '/register/code-verification/success-confirmation'),
 
     // Main app flow with bottom tabs
     AutoRoute(
@@ -42,8 +36,6 @@ class AppRouter extends RootStackRouter {
     ),
   ];
 }
-
-
 
 // @AutoRouterConfig()
 // class AppRouter extends RootStackRouter {

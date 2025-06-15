@@ -1,4 +1,9 @@
 {
- "java.configuration.updateBuildConfiguration": "interactive",
- "cmake.ignoreCMakeListsMissing": true
+ "editor.codeActionsOnSave": {
+  "source.fixAll": "explicit",
+  "source.organizeImports": "explicit"
+ },
+ "editor.formatOnSave": true,
+ "cmake.ignoreCMakeListsMissing": true,
+ "java.configuration.updateBuildConfiguration": "interactive"
 }

@@ -32,10 +32,7 @@ class CirclesRow extends StatelessWidget {
           child: Container(
             width: size,
             height: size,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: index == currentIndex ? active : inactive,
-            ),
+            decoration: BoxDecoration(shape: BoxShape.circle, color: index == currentIndex ? active : inactive),
           ),
         );
       }),

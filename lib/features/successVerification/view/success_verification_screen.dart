@@ -22,28 +22,22 @@ class SuccessVerificationScreen extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    SizedBox(height: SizeConfig.getVerticalPadding(114)),
-                    BaseTitleNSubtitle(),
-                    SizedBox(height: SizeConfig.getVerticalPadding(45)),
+                    SizedBox(height: SizeConfig.getVerticalSize(114)),
+                    const BaseTitleNSubtitle(),
+                    SizedBox(height: SizeConfig.getVerticalSize(45)),
                     Text(
                       S.of(context).verifyAccount,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(40)),
-                    SvgPicture.asset(
-                      'assets/authFlow/success_verification.svg',
-                    ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(35)),
+                    SizedBox(height: SizeConfig.getVerticalSize(40)),
+                    SvgPicture.asset('assets/authFlow/success_verification.svg'),
+                    SizedBox(height: SizeConfig.getVerticalSize(35)),
                     Text(
                       textAlign: TextAlign.center,
                       S.of(context).yourAccountHasBeennverifiedSuccessfully,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(70)),
+                    SizedBox(height: SizeConfig.getVerticalSize(70)),
                     BaseButton(
                       text: S.of(context).goToDashboard,
                       onTap: () => _onGoToDashboardTap(context),

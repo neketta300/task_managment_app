@@ -9,12 +9,12 @@ class ForgotPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Spacer(),
+        const Spacer(),
         Container(
-          margin: EdgeInsets.only(right: 15),
+          margin: const EdgeInsets.only(right: 15),
           child: Text(
             S.of(context).forgotPassword,
-            style: GoogleFonts.poppins(color: Color(0XFF87ADF4), fontSize: 12),
+            style: GoogleFonts.poppins(color: const Color(0XFF87ADF4), fontSize: 12),
           ),
         ),
       ],

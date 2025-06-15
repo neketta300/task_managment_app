@@ -28,5 +28,9 @@
   "dontReceiveACode": "Don’t receive a code? ",
   "resend": "Resend",
   "yourAccountHasBeennverifiedSuccessfully": "Your Account has been\nVerified Successfully!",
-  "goToDashboard": "Go to Dashboard"
+  "goToDashboard": "Go to Dashboard",
+  "haveANiceDay": "Have a nice day!",
+  "progress": "Progress",
+  "myPriorityTask": "My Priority Task",
+  "dailyTask": "Daily Task"
 }

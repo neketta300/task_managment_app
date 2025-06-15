@@ -23,56 +23,46 @@ class VerificationCodeScreen extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  left: SizeConfig.getVerticalPadding(20),
-                  top: SizeConfig.getHorizontalPadding(76),
+                  left: SizeConfig.getVerticalSize(20),
+                  top: SizeConfig.getHorizontalSize(76),
                   child: IconButton(
                     style: ButtonStyle(
                       shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
+                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       ),
-                      backgroundColor: WidgetStateProperty.all(
-                        theme.primaryColor,
-                      ),
+                      backgroundColor: WidgetStateProperty.all(theme.primaryColor),
                     ),
                     onPressed: () {
                       _onBackButtonPressed(context);
                     },
-                    icon: SvgPicture.asset(
-                      'assets/backButtonIcon/back_arrow.svg',
-                    ),
+                    icon: SvgPicture.asset('assets/backButtonIcon/back_arrow.svg'),
                   ),
                 ),
                 Column(
                   children: [
-                    SizedBox(height: SizeConfig.getVerticalPadding(114)),
-                    BaseTitleNSubtitle(),
-                    SizedBox(height: SizeConfig.getVerticalPadding(45)),
+                    SizedBox(height: SizeConfig.getVerticalSize(114)),
+                    const BaseTitleNSubtitle(),
+                    SizedBox(height: SizeConfig.getVerticalSize(45)),
                     Text(
                       S.of(context).verifyAccount,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(40)),
+                    SizedBox(height: SizeConfig.getVerticalSize(40)),
                     SvgPicture.asset('assets/authFlow/confirm_email.svg'),
-                    SizedBox(height: SizeConfig.getVerticalPadding(35)),
+                    SizedBox(height: SizeConfig.getVerticalSize(35)),
                     Text(
                       textAlign: TextAlign.center,
                       S.of(context).pleaseEnterTheVerificationNumber,
-                      style: theme.textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(52)),
+                    SizedBox(height: SizeConfig.getVerticalSize(52)),
                     IntrinsicWidth(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          BaseConfirmTextfield(),
-                          SizedBox(height: SizeConfig.getVerticalPadding(9)),
+                          const BaseConfirmTextfield(),
+                          SizedBox(height: SizeConfig.getVerticalSize(9)),
                           Padding(
                             padding: const EdgeInsets.only(left: 74),
                             child: Row(
@@ -80,7 +70,7 @@ class VerificationCodeScreen extends StatelessWidget {
                                 Text(
                                   S.of(context).dontReceiveACode,
                                   style: GoogleFonts.poppins(
-                                    color: Color(0xFF9A9A9A),
+                                    color: const Color(0xFF9A9A9A),
                                     fontSize: 10,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -88,10 +78,7 @@ class VerificationCodeScreen extends StatelessWidget {
                                 GestureDetector(
                                   child: Text(
                                     S.of(context).resend,
-                                    style: TextStyle(
-                                      color: theme.primaryColor,
-                                      fontSize: 10,
-                                    ),
+                                    style: TextStyle(color: theme.primaryColor, fontSize: 10),
                                   ),
                                 ),
                               ],
@@ -100,11 +87,8 @@ class VerificationCodeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: SizeConfig.getVerticalPadding(61)),
-                    BaseButton(
-                      text: S.of(context).confirm,
-                      onTap: () => _onConfirmTap(context),
-                    ),
+                    SizedBox(height: SizeConfig.getVerticalSize(61)),
+                    BaseButton(text: S.of(context).confirm, onTap: () => _onConfirmTap(context)),
                   ],
                 ),
               ],
@@ -129,16 +113,11 @@ class BaseConfirmTextfield extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 74),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 74),
       child: Row(
         spacing: 9,
-        children: [
-          TextfieldCell(),
-          TextfieldCell(),
-          TextfieldCell(),
-          TextfieldCell(),
-        ],
+        children: [TextfieldCell(), TextfieldCell(), TextfieldCell(), TextfieldCell()],
       ),
     );
   }

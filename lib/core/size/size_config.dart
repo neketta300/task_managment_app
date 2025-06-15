@@ -18,11 +18,11 @@ class SizeConfig {
     blockSizeVertical = screenHeight / 100;
   }
 
-  static double getVerticalPadding(double designPadding) {
+  static double getVerticalSize(double designPadding) {
     return designPadding * (screenHeight / _designHeight);
   }
 
-  static double getHorizontalPadding(double designPadding) {
+  static double getHorizontalSize(double designPadding) {
     return designPadding * (screenWidth / _designWidth);
   }
 }

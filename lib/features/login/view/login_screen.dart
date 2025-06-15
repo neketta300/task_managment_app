@@ -21,69 +21,52 @@ class LoginScreen extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                SizedBox(height: SizeConfig.getVerticalPadding(114)),
-                BaseTitleNSubtitle(),
-                SizedBox(height: SizeConfig.getVerticalPadding(70)),
+                SizedBox(height: SizeConfig.getVerticalSize(114)),
+                const BaseTitleNSubtitle(),
+                SizedBox(height: SizeConfig.getVerticalSize(70)),
                 Text(
                   S.of(context).loginToYourAccount,
-                  style: theme.textTheme.bodyMedium?.copyWith(
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: theme.textTheme.bodyMedium?.copyWith(fontWeight: FontWeight.w600),
                 ),
-                SizedBox(height: SizeConfig.getVerticalPadding(35)),
+                SizedBox(height: SizeConfig.getVerticalSize(35)),
                 BaseTextfieldWIcon(
                   pathToImage: 'assets/textfieldsIcons/message.svg',
                   hintText: S.of(context).email,
                 ),
-                SizedBox(height: SizeConfig.getVerticalPadding(20)),
+                SizedBox(height: SizeConfig.getVerticalSize(20)),
                 BaseTextfieldWIcon(
                   pathToImage: 'assets/textfieldsIcons/lock.svg',
                   hintText: S.of(context).password,
                 ),
-                ForgotPassword(),
-                SizedBox(height: SizeConfig.getVerticalPadding(42)),
-                BaseButton(
-                  text: S.of(context).login,
-                  onTap: () => _onLoginTap(context),
-                ),
-                SizedBox(height: SizeConfig.getVerticalPadding(35)),
+                const ForgotPassword(),
+                SizedBox(height: SizeConfig.getVerticalSize(42)),
+                BaseButton(text: S.of(context).login, onTap: () => _onLoginTap(context)),
+                SizedBox(height: SizeConfig.getVerticalSize(35)),
                 BaseLoginLabel(text: S.of(context).orLoginWith),
-                SizedBox(height: SizeConfig.getVerticalPadding(21)),
+                SizedBox(height: SizeConfig.getVerticalSize(21)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    BaseLoginWithButton(
-                      pathToImage: 'assets/signInWithIcons/google.svg',
-                    ),
-                    SizedBox(width: SizeConfig.getHorizontalPadding(40)),
-                    BaseLoginWithButton(
-                      pathToImage: 'assets/signInWithIcons/facebook.svg',
-                    ),
-                    SizedBox(width: SizeConfig.getHorizontalPadding(40)),
-                    BaseLoginWithButton(
-                      pathToImage: 'assets/signInWithIcons/twitter.svg',
-                    ),
+                    const BaseLoginWithButton(pathToImage: 'assets/signInWithIcons/google.svg'),
+                    SizedBox(width: SizeConfig.getHorizontalSize(40)),
+                    const BaseLoginWithButton(pathToImage: 'assets/signInWithIcons/facebook.svg'),
+                    SizedBox(width: SizeConfig.getHorizontalSize(40)),
+                    const BaseLoginWithButton(pathToImage: 'assets/signInWithIcons/twitter.svg'),
                   ],
                 ),
-                SizedBox(height: SizeConfig.getVerticalPadding(21)),
+                SizedBox(height: SizeConfig.getVerticalSize(21)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       S.of(context).dontHaveAnAccount,
-                      style: GoogleFonts.poppins(
-                        fontSize: 12,
-                        color: Color(0xFF474747),
-                      ),
+                      style: GoogleFonts.poppins(fontSize: 12, color: const Color(0xFF474747)),
                     ),
                     GestureDetector(
                       onTap: () => _onSignUpTap(context),
                       child: Text(
                         S.of(context).signUp,
-                        style: GoogleFonts.poppins(
-                          fontSize: 12,
-                          color: theme.primaryColor,
-                        ),
+                        style: GoogleFonts.poppins(fontSize: 12, color: theme.primaryColor),
                       ),
                     ),
                   ],
