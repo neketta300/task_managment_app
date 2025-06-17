@@ -1,9 +1,12 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
 import 'package:task_managment/features/account/view/account.dart';
 import 'package:task_managment/features/calendar/view/calendar.dart';
+import 'package:task_managment/features/detailPriorityTask/view/detail_priority_task_screen.dart';
 import 'package:task_managment/features/login/view/login_screen.dart';
 import 'package:task_managment/features/register/view/register_screen.dart';
 import 'package:task_managment/features/verificationCode/view/verification_code_screen.dart';
+
 import '../features/home/home.dart';
 import '../features/main/view/main_screen.dart';
 import '../features/onboarding/start.dart';
@@ -22,7 +25,10 @@ class AppRouter extends RootStackRouter {
     AutoRoute(page: LoginRoute.page, path: '/login'),
     AutoRoute(page: RegisterRoute.page, path: '/register'),
     AutoRoute(page: VerificationCodeRoute.page, path: '/register/code-verification'),
-    AutoRoute(page: SuccessVerificationRoute.page, path: '/register/code-verification/success-confirmation'),
+    AutoRoute(
+      page: SuccessVerificationRoute.page,
+      path: '/register/code-verification/success-confirmation',
+    ),
 
     // Main app flow with bottom tabs
     AutoRoute(
@@ -34,28 +40,6 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: CalendarRoute.page, path: 'profile'),
       ],
     ),
+    AutoRoute(page: DetailPriorityTaskRoute.page, path: '/detail-priority-task/:id'),
   ];
 }
-
-// @AutoRouterConfig()
-// class AppRouter extends RootStackRouter {
-//   @override
-//   List<AutoRoute> get routes => [
-//         AutoRoute(path: '/onboarding/first', page: FstOnboardingRoute.page, initial: true),
-//         AutoRoute(path: '/onboarding/second', page: ScndOnboardingRoute.page),
-//         AutoRoute(path: '/onboarding/third', page: ThrdOnboardingRoute.page),
-//         AutoRoute(path: '/login', page: LoginRoute.page),
-//         AutoRoute(path: '/register', page: RegisterRoute.page),
-//         AutoRoute(path: '/email-confirmation', page: EmailConfirmationRoute.page),
-//         AutoRoute(path: '/success-confirmation', page: SuccessConfirmationRoute.page),
-//         AutoRoute(
-//           path: '/home',
-//           page: HomeRoute.page,
-//           children: [
-//             AutoRoute(path: 'tab1', page: Tab1Route.page, initial: true),
-//             AutoRoute(path: 'tab2', page: Tab2Route.page),
-//             AutoRoute(path: 'tab3', page: Tab3Route.page),
-//           ],
-//         ),
-//       ];
-// }

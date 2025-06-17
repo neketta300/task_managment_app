@@ -43,6 +43,54 @@ class CalendarRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [DetailPriorityTaskScreen]
+class DetailPriorityTaskRoute
+    extends PageRouteInfo<DetailPriorityTaskRouteArgs> {
+  DetailPriorityTaskRoute({
+    Key? key,
+    required int taskId,
+    List<PageRouteInfo>? children,
+  }) : super(
+         DetailPriorityTaskRoute.name,
+         args: DetailPriorityTaskRouteArgs(key: key, taskId: taskId),
+         initialChildren: children,
+       );
+
+  static const String name = 'DetailPriorityTaskRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<DetailPriorityTaskRouteArgs>();
+      return DetailPriorityTaskScreen(key: args.key, taskId: args.taskId);
+    },
+  );
+}
+
+class DetailPriorityTaskRouteArgs {
+  const DetailPriorityTaskRouteArgs({this.key, required this.taskId});
+
+  final Key? key;
+
+  final int taskId;
+
+  @override
+  String toString() {
+    return 'DetailPriorityTaskRouteArgs{key: $key, taskId: $taskId}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! DetailPriorityTaskRouteArgs) return false;
+    return key == other.key && taskId == other.taskId;
+  }
+
+  @override
+  int get hashCode => key.hashCode ^ taskId.hashCode;
+}
+
+/// generated route for
 /// [HomeScreen]
 class HomeRoute extends PageRouteInfo<void> {
   const HomeRoute({List<PageRouteInfo>? children})

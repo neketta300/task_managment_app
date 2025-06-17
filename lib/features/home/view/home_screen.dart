@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:task_managment/generated/l10n.dart';
+import 'package:task_managment/router/router.dart';
 
 import '../../../core/core.dart';
 import '../../../ui/ui.dart';
@@ -42,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return TaskCard(
-                        onTap: () {},
+                        onTap: () => _onPriorityTaskCardTap(context),
                         deadlineTime: '5 days',
                         title: 'UI Design',
                         pathToImage: 'assets/tasksIcon/icon1.svg',
@@ -82,4 +83,7 @@ class HomeScreen extends StatelessWidget {
       ],
     );
   }
+
+  Future<Object?> _onPriorityTaskCardTap(BuildContext context) =>
+      context.router.push(DetailPriorityTaskRoute(taskId: 1));
 }

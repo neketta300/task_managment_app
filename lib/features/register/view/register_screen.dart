@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:task_managment/generated/l10n.dart';
 import 'package:task_managment/router/router.dart';
 
@@ -23,17 +22,9 @@ class RegisterScreen extends StatelessWidget {
                 Positioned(
                   left: SizeConfig.getVerticalSize(20),
                   top: SizeConfig.getHorizontalSize(76),
-                  child: IconButton(
-                    style: ButtonStyle(
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      ),
-                      backgroundColor: WidgetStateProperty.all(theme.primaryColor),
-                    ),
-                    onPressed: () {
-                      _onBackButtonPressed(context);
-                    },
-                    icon: SvgPicture.asset('assets/backButtonIcon/back_arrow.svg'),
+                  child: BaseActionButton(
+                    onPressed: () => _onBackButtonPressed(context),
+                    pathToImage: 'assets/backButtonIcon/back_arrow.svg',
                   ),
                 ),
                 Column(

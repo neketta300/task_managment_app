@@ -4,24 +4,17 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../core/core.dart';
 import '../ui.dart';
 
-class BaseTaskRow extends StatefulWidget {
-  const BaseTaskRow({super.key, required this.tasksText});
+class BaseTaskRow extends StatelessWidget {
+  const BaseTaskRow({super.key, required this.tasksText, this.onTap});
 
   final String tasksText;
+  final void Function()? onTap;
 
-  @override
-  State<BaseTaskRow> createState() => _BaseTaskRowState();
-}
-
-class _BaseTaskRowState extends State<BaseTaskRow> {
-  bool _isPressed = true;
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return GestureDetector(
-      onTap: () {
-        setState(() => _isPressed = !_isPressed);
-      },
+      onTap: () => onTap,
       child: Container(
         padding: EdgeInsets.symmetric(
           horizontal: SizeConfig.getHorizontalSize(14),
@@ -35,7 +28,7 @@ class _BaseTaskRowState extends State<BaseTaskRow> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              widget.tasksText,
+              tasksText,
               style: GoogleFonts.poppins(
                 color: theme.primaryColor,
                 fontSize: 16,
@@ -43,7 +36,7 @@ class _BaseTaskRowState extends State<BaseTaskRow> {
               ),
             ),
             const Spacer(),
-            BaseRadioButton(isPressed: _isPressed),
+            const BaseRadioButton(),
             // const AnimatedRoundButton(),
           ],
         ),

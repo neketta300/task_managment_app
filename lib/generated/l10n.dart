@@ -328,6 +328,11 @@ class S {
   String get dailyTask {
     return Intl.message('Daily Task', name: 'dailyTask', desc: '', args: []);
   }
+
+  /// `Description`
+  String get description {
+    return Intl.message('Description', name: 'description', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

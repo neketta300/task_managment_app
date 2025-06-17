@@ -32,5 +32,6 @@
   "haveANiceDay": "Have a nice day!",
   "progress": "Progress",
   "myPriorityTask": "My Priority Task",
-  "dailyTask": "Daily Task"
+  "dailyTask": "Daily Task",
+  "description": "Description"
 }

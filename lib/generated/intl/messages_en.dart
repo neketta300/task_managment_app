@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Create your account",
     ),
     "dailyTask": MessageLookupByLibrary.simpleMessage("Daily Task"),
+    "description": MessageLookupByLibrary.simpleMessage("Description"),
     "dontHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Don’t have an account?",
     ),

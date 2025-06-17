@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_managment/generated/l10n.dart';
@@ -8,6 +7,7 @@ import 'package:task_managment/generated/l10n.dart';
 import '../../../core/core.dart';
 import '../../../router/router.dart';
 import '../../../ui/ui.dart';
+import '../widgets/widgets.dart';
 
 @RoutePage()
 class VerificationCodeScreen extends StatelessWidget {
@@ -25,17 +25,9 @@ class VerificationCodeScreen extends StatelessWidget {
                 Positioned(
                   left: SizeConfig.getVerticalSize(20),
                   top: SizeConfig.getHorizontalSize(76),
-                  child: IconButton(
-                    style: ButtonStyle(
-                      shape: WidgetStateProperty.all(
-                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      ),
-                      backgroundColor: WidgetStateProperty.all(theme.primaryColor),
-                    ),
-                    onPressed: () {
-                      _onBackButtonPressed(context);
-                    },
-                    icon: SvgPicture.asset('assets/backButtonIcon/back_arrow.svg'),
+                  child: BaseActionButton(
+                    onPressed: () => _onBackButtonPressed(context),
+                    pathToImage: 'assets/backButtonIcon/back_arrow.svg',
                   ),
                 ),
                 Column(
@@ -61,7 +53,7 @@ class VerificationCodeScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
-                          const BaseConfirmTextfield(),
+                          const ConfirmTextfield(),
                           SizedBox(height: SizeConfig.getVerticalSize(9)),
                           Padding(
                             padding: const EdgeInsets.only(left: 74),
@@ -105,46 +97,5 @@ class VerificationCodeScreen extends StatelessWidget {
 
   void _onBackButtonPressed(BuildContext context) {
     Navigator.of(context).pop();
-  }
-}
-
-class BaseConfirmTextfield extends StatelessWidget {
-  const BaseConfirmTextfield({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 74),
-      child: Row(
-        spacing: 9,
-        children: [TextfieldCell(), TextfieldCell(), TextfieldCell(), TextfieldCell()],
-      ),
-    );
-  }
-}
-
-class TextfieldCell extends StatelessWidget {
-  const TextfieldCell({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 50,
-      child: TextFormField(
-        style: GoogleFonts.poppins(),
-        onChanged: (value) {
-          if (value.length == 1) {
-            FocusScope.of(context).nextFocus();
-          }
-        },
-        decoration: textfieldDecoration,
-        inputFormatters: [
-          LengthLimitingTextInputFormatter(1),
-          FilteringTextInputFormatter.digitsOnly,
-        ],
-        textAlign: TextAlign.center,
-        keyboardType: TextInputType.number,
-      ),
-    );
   }
 }
