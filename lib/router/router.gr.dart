@@ -43,6 +43,22 @@ class CalendarRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [DetailDailyTaskScreen]
+class DetailDailyTaskRoute extends PageRouteInfo<void> {
+  const DetailDailyTaskRoute({List<PageRouteInfo>? children})
+    : super(DetailDailyTaskRoute.name, initialChildren: children);
+
+  static const String name = 'DetailDailyTaskRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const DetailDailyTaskScreen();
+    },
+  );
+}
+
+/// generated route for
 /// [DetailPriorityTaskScreen]
 class DetailPriorityTaskRoute
     extends PageRouteInfo<DetailPriorityTaskRouteArgs> {
