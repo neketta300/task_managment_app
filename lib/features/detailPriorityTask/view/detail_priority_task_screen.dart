@@ -43,17 +43,10 @@ class DetailPriorityTaskScreen extends StatelessWidget {
                         TimeSegment('12', 'days'),
                         TimeSegment('4', 'hours'),
                       ],
-                      useDivier: true,
+                      useDivider: true,
                     ),
                     SizedBox(height: SizeConfig.getVerticalSize(24)),
-                    Text(
-                      S.of(context).description,
-                      style: GoogleFonts.poppins(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        color: const Color(0xFF4A4646),
-                      ),
-                    ),
+                    const Descritpion(),
                     Text(
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis libero ut turpis maximus dapibus at at nisi. Integer molestie nisi sapien, rhoncus porta metus imperdiet nec. Pellentesque cursus molestie tincidunt. Nunc ultrices pretium ultricies. Vivamus laoreet, enim sit amet lacinia porttitor, risus nisi mattis risus.',
                       style: GoogleFonts.poppins(fontSize: 14, color: const Color(0xFF4A4646)),
@@ -92,7 +85,7 @@ class DetailPriorityTaskScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(bottom: SizeConfig.getVerticalSize(8)),
-                  child: BaseTaskRow(tasksText: 'Work Out', onTap: context.router.push()),
+                  child: const BaseTaskRow(tasksText: 'Work Out'),
                 );
               },
             ),

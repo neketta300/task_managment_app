@@ -75,7 +75,10 @@ class HomeScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: EdgeInsets.only(bottom: SizeConfig.getVerticalSize(8)),
-                child: const BaseTaskRow(tasksText: 'Work Out'), // Ваш виджет задачи
+                child: BaseTaskRow(
+                  tasksText: 'Work Out',
+                  onTap: () => _onDailyTaskTap(context),
+                ), // Ваш виджет задачи
               );
             },
           ),
@@ -83,6 +86,9 @@ class HomeScreen extends StatelessWidget {
       ],
     );
   }
+
+  Future<Object?> _onDailyTaskTap(BuildContext context) =>
+      context.router.push(DetailDailyTaskRoute(taskId: 1));
 
   Future<Object?> _onPriorityTaskCardTap(BuildContext context) =>
       context.router.push(DetailPriorityTaskRoute(taskId: 1));

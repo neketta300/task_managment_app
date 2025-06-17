@@ -44,18 +44,49 @@ class CalendarRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [DetailDailyTaskScreen]
-class DetailDailyTaskRoute extends PageRouteInfo<void> {
-  const DetailDailyTaskRoute({List<PageRouteInfo>? children})
-    : super(DetailDailyTaskRoute.name, initialChildren: children);
+class DetailDailyTaskRoute extends PageRouteInfo<DetailDailyTaskRouteArgs> {
+  DetailDailyTaskRoute({
+    Key? key,
+    required int taskId,
+    List<PageRouteInfo>? children,
+  }) : super(
+         DetailDailyTaskRoute.name,
+         args: DetailDailyTaskRouteArgs(key: key, taskId: taskId),
+         initialChildren: children,
+       );
 
   static const String name = 'DetailDailyTaskRoute';
 
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const DetailDailyTaskScreen();
+      final args = data.argsAs<DetailDailyTaskRouteArgs>();
+      return DetailDailyTaskScreen(key: args.key, taskId: args.taskId);
     },
   );
+}
+
+class DetailDailyTaskRouteArgs {
+  const DetailDailyTaskRouteArgs({this.key, required this.taskId});
+
+  final Key? key;
+
+  final int taskId;
+
+  @override
+  String toString() {
+    return 'DetailDailyTaskRouteArgs{key: $key, taskId: $taskId}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! DetailDailyTaskRouteArgs) return false;
+    return key == other.key && taskId == other.taskId;
+  }
+
+  @override
+  int get hashCode => key.hashCode ^ taskId.hashCode;
 }
 
 /// generated route for

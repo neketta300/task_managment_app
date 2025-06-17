@@ -6,10 +6,10 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../ui.dart';
 
 class BaseDetailHeader extends StatelessWidget {
-  const BaseDetailHeader({super.key, required this.taskName, required this.pathToImage});
+  const BaseDetailHeader({super.key, required this.taskName, this.pathToImage});
 
   final String taskName;
-  final String pathToImage;
+  final String? pathToImage;
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +17,14 @@ class BaseDetailHeader extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        SvgPicture.asset(
-          pathToImage,
-          width: 30,
-          colorFilter: ColorFilter.mode(theme.primaryColor, BlendMode.srcIn),
-        ),
+        if (pathToImage != null)
+          SvgPicture.asset(
+            pathToImage!,
+            width: 30,
+            colorFilter: ColorFilter.mode(theme.primaryColor, BlendMode.srcIn),
+          ),
         Text(
-          ' $taskName',
+          pathToImage != null ? ' $taskName' : taskName,
           style: GoogleFonts.poppins(
             color: theme.primaryColor,
             fontWeight: FontWeight.bold,

@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Easy Time Management",
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
+    "finish": MessageLookupByLibrary.simpleMessage("Finish"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot password?"),
     "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
     "goToDashboard": MessageLookupByLibrary.simpleMessage("Go to Dashboard"),

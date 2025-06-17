@@ -7,19 +7,29 @@ class BaseTimelinePoint extends StatelessWidget {
     required this.date,
     required this.point,
     required this.crossAxisAlignment,
+    this.fontSize,
+    this.fontWeight,
   });
 
   final String date;
   final String point;
   final CrossAxisAlignment crossAxisAlignment;
+  final double? fontSize;
+  final FontWeight? fontWeight;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: crossAxisAlignment,
       children: [
-        Text(point, style: GoogleFonts.poppins(fontSize: 16, fontWeight: FontWeight.w500)),
-        Text(date, style: GoogleFonts.poppins(fontSize: 14)),
+        Text(
+          point,
+          style: GoogleFonts.poppins(
+            fontSize: fontSize ?? 16,
+            fontWeight: fontWeight ?? FontWeight.w500,
+          ),
+        ),
+        Text(date, style: GoogleFonts.poppins(fontSize: fontSize ?? 14)),
       ],
     );
   }

@@ -1,3 +1,4 @@
+export 'base_description.dart';
 export 'base_detail_header.dart';
 export 'base_divider.dart';
 export 'base_timeline_point.dart';

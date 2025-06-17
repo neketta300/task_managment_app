@@ -33,5 +33,6 @@
   "progress": "Progress",
   "myPriorityTask": "My Priority Task",
   "dailyTask": "Daily Task",
-  "description": "Description"
+  "description": "Description",
+  "finish": "Finish"
 }

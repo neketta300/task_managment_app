@@ -333,6 +333,11 @@ class S {
   String get description {
     return Intl.message('Description', name: 'description', desc: '', args: []);
   }
+
+  /// `Finish`
+  String get finish {
+    return Intl.message('Finish', name: 'finish', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -14,15 +14,15 @@ class BaseTimeContainer extends StatelessWidget {
 
   final String value;
   final String timeUnit;
-  final double? width;
-  final double? height;
+  final double width;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Container(
-      width: SizeConfig.getHorizontalSize(width!),
-      height: SizeConfig.getVerticalSize(height!),
+      width: SizeConfig.getHorizontalSize(width),
+      height: SizeConfig.getVerticalSize(height),
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: theme.primaryColor),
 
       child: Column(
