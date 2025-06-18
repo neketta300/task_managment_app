@@ -90,6 +90,90 @@ class DetailDailyTaskRouteArgs {
 }
 
 /// generated route for
+/// [DetailNotificationScreen]
+class DetailNotificationRoute
+    extends PageRouteInfo<DetailNotificationRouteArgs> {
+  DetailNotificationRoute({
+    Key? key,
+    required int notificationId,
+    required String pathToImage,
+    required String notificationTitle,
+    required String notificationMessage,
+    List<PageRouteInfo>? children,
+  }) : super(
+         DetailNotificationRoute.name,
+         args: DetailNotificationRouteArgs(
+           key: key,
+           notificationId: notificationId,
+           pathToImage: pathToImage,
+           notificationTitle: notificationTitle,
+           notificationMessage: notificationMessage,
+         ),
+         initialChildren: children,
+       );
+
+  static const String name = 'DetailNotificationRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<DetailNotificationRouteArgs>();
+      return DetailNotificationScreen(
+        key: args.key,
+        notificationId: args.notificationId,
+        pathToImage: args.pathToImage,
+        notificationTitle: args.notificationTitle,
+        notificationMessage: args.notificationMessage,
+      );
+    },
+  );
+}
+
+class DetailNotificationRouteArgs {
+  const DetailNotificationRouteArgs({
+    this.key,
+    required this.notificationId,
+    required this.pathToImage,
+    required this.notificationTitle,
+    required this.notificationMessage,
+  });
+
+  final Key? key;
+
+  final int notificationId;
+
+  final String pathToImage;
+
+  final String notificationTitle;
+
+  final String notificationMessage;
+
+  @override
+  String toString() {
+    return 'DetailNotificationRouteArgs{key: $key, notificationId: $notificationId, pathToImage: $pathToImage, notificationTitle: $notificationTitle, notificationMessage: $notificationMessage}';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other is! DetailNotificationRouteArgs) return false;
+    return key == other.key &&
+        notificationId == other.notificationId &&
+        pathToImage == other.pathToImage &&
+        notificationTitle == other.notificationTitle &&
+        notificationMessage == other.notificationMessage;
+  }
+
+  @override
+  int get hashCode =>
+      key.hashCode ^
+      notificationId.hashCode ^
+      pathToImage.hashCode ^
+      notificationTitle.hashCode ^
+      notificationMessage.hashCode;
+}
+
+/// generated route for
 /// [DetailPriorityTaskScreen]
 class DetailPriorityTaskRoute
     extends PageRouteInfo<DetailPriorityTaskRouteArgs> {
@@ -181,6 +265,22 @@ class MainRoute extends PageRouteInfo<void> {
     name,
     builder: (data) {
       return const MainScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [NotificationScreen]
+class NotificationRoute extends PageRouteInfo<void> {
+  const NotificationRoute({List<PageRouteInfo>? children})
+    : super(NotificationRoute.name, initialChildren: children);
+
+  static const String name = 'NotificationRoute';
+
+  static PageInfo page = PageInfo(
+    name,
+    builder: (data) {
+      return const NotificationScreen();
     },
   );
 }

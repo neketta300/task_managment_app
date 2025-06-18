@@ -67,6 +67,7 @@ flutter:
   assets:
     - assets/getStartedScreens/
     - assets/bottomNavBarIcons/
+    - assets/notificationIcons/
     - assets/dashboradScreen/
     - assets/textfieldsIcons/
     - assets/signInWithIcons/

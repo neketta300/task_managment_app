@@ -33,7 +33,9 @@ class BaseDetailHeader extends StatelessWidget {
         ),
         const Spacer(),
         BaseActionButton(
-          onPressed: () => _onBackActionButton(context),
+          onTap: () => _onBackActionButton(context),
+          buttonSize: 30,
+          imageSize: 10,
           pathToImage: 'assets/backButtonIcon/close.svg',
         ),
       ],

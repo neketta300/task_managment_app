@@ -23,8 +23,9 @@ class RegisterScreen extends StatelessWidget {
                   left: SizeConfig.getVerticalSize(20),
                   top: SizeConfig.getHorizontalSize(76),
                   child: BaseActionButton(
-                    onPressed: () => _onBackButtonPressed(context),
+                    onTap: () => _onBackButtonPressed(context),
                     pathToImage: 'assets/backButtonIcon/back_arrow.svg',
+                    buttonSize: 30,
                   ),
                 ),
                 Column(

@@ -3,7 +3,10 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Header extends StatelessWidget {
-  const Header({super.key});
+  const Header({super.key, required this.onTap, required this.pathToImage});
+
+  final void Function() onTap;
+  final String pathToImage;
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +17,7 @@ class Header extends StatelessWidget {
           style: GoogleFonts.poppins(fontSize: 14, color: const Color(0xFF474747)),
         ),
         const Spacer(),
-        GestureDetector(
-          onTap: () {},
-          child: SvgPicture.asset('assets/dashboradScreen/notification.svg'),
-        ),
+        GestureDetector(onTap: onTap, child: SvgPicture.asset(pathToImage)),
       ],
     );
   }

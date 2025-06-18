@@ -27,7 +27,10 @@ class HomeScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: SizeConfig.getVerticalSize(12)),
-                      const Header(),
+                      Header(
+                        onTap: () => _onNotificationTap(context),
+                        pathToImage: 'assets/dashboradScreen/notification.svg',
+                      ),
                       SizedBox(height: SizeConfig.getVerticalSize(33)),
                       const SubHeader(name: 'Neketta'),
                       SizedBox(height: SizeConfig.getVerticalSize(33)),
@@ -85,6 +88,10 @@ class HomeScreen extends StatelessWidget {
         ),
       ],
     );
+  }
+
+  void _onNotificationTap(BuildContext context) {
+    context.router.push(const NotificationRoute());
   }
 
   Future<Object?> _onDailyTaskTap(BuildContext context) =>

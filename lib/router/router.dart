@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:task_managment/features/account/view/account.dart';
 import 'package:task_managment/features/calendar/view/calendar.dart';
 import 'package:task_managment/features/detailDailyTask/view/detail_daily_task_screen.dart';
+import 'package:task_managment/features/detailNotification/view/detail_notification_screen.dart';
 import 'package:task_managment/features/detailPriorityTask/view/detail_priority_task_screen.dart';
 import 'package:task_managment/features/login/view/login_screen.dart';
+import 'package:task_managment/features/notification/view/notification_screen.dart';
 import 'package:task_managment/features/register/view/register_screen.dart';
 import 'package:task_managment/features/verificationCode/view/verification_code_screen.dart';
 
@@ -43,5 +45,7 @@ class AppRouter extends RootStackRouter {
     ),
     AutoRoute(page: DetailPriorityTaskRoute.page, path: '/detail-priority-task/:id'),
     AutoRoute(page: DetailDailyTaskRoute.page, path: '/detail-daily-task/:id'),
+    AutoRoute(page: NotificationRoute.page, path: '/notification'),
+    AutoRoute(page: DetailNotificationRoute.page, path: '/detail-notification//:notificationId'),
   ];
 }
